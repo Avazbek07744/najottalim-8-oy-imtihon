@@ -1,0 +1,26 @@
+.main__component{
+    background: url(https://s3-alpha-sig.figma.com/img/caf5/016f/97f154adfd88d0e48d9a7fc87e5ab035?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ns1OFW3yxM-~1ws-0TXFkmHn~kUFIX1r3US6OT~78ItQorz1GV8Sbmq0tGDHis-AlJ96pyhs7BypQAEmok5TM1D0s-JkhJmmdrdISkxLsDoBu9wkfQmaFVhnNCUOUbAfLgbnK1T3gIfKVQq9ucwPZlFGKiN368KN~6FKGgRqR0Oj7uRyasYgSFb~kE3GwJJlGKUTrM1yN86y~52O9mJx6AfTLDTzcc2-G2SnmaN1vhfQ7YywVw4UCRAGzffGGc9iT3JZdJehS0fo~-HQEozS0ntmOaU8QC9yE~Ek2onxDPttru3ahnsT0FefM7c5aG2IxHTxcLSakH9xl1fVFs6YgA__);
+    height: 400px;
+    object-fit: cover;
+}
+
+body {
+    font-size: 14px;
+    color: #000;
+}
+
+.swiper {
+    width: 1252px;
+    height: 187px;
+}
+
+.swiper-slide { 
+    width: 20px;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
