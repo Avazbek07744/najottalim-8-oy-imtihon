@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Header from './Header';
-// import ChartJSx from './ChartJSx';
+import ChartJSx from './ChartJSx';
 
 const Deteils = () => {
     const param = useParams();
@@ -67,9 +67,9 @@ const Deteils = () => {
                     </p>
                 </div>
                 <div>
-                    {/* <ChartJSx/> */}
+                    <ChartJSx coin='ethereum' />
                     <div className='flex gap-9 ml-5'>
-                        <Link className='w-[230px] py-3 ps-4 capitalize hover:bg-[#87CEEB] hover:text-black rounded'>24 hours</Link>
+                        <Link className='w-[230px] py-3 ps-4 capitalize bg-[#87CEEB] text-black rounded'>24 hours</Link>
                         <Link className='w-[230px] py-3 ps-4 capitalize hover:bg-[#87CEEB] hover:text-black rounded'>30 days</Link>
                         <Link className='w-[230px] py-3 ps-4 capitalize hover:bg-[#87CEEB] hover:text-black rounded'>3 months</Link>
                         <Link className='w-[230px] py-3 ps-4 capitalize hover:bg-[#87CEEB] hover:text-black rounded'>1 years</Link>

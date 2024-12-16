@@ -1,37 +1,64 @@
-import React, { useEffect, useState } from 'react'
-import Chart from 'react-apexcharts'
+import React, { useState } from "react";
+import Chart from "react-apexcharts";
 
-const ChartJSx = () => {
-    const [chartData, setChartData] = useState({})
+const ChartComponent = () => {
+    const [chartData, setChartData] = useState([45, 52, 38, 45, 19, 23]); 
+    const [chartLabels, setChartLabels] = useState([
+        "Jun", "Aug", "Sep", "Oct", "Nov", "Dec"
+    ]);
 
-    setChartData({
-        options: {
-            chart: {
-                id: "basic-bar"
-            },
-            xaxis: {
-                categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
-            }
+    const options = {
+        chart: {
+            id: "crypto-chart",
+            type: "line",
+            background: "inherit",
+            toolbar: { show: false },
         },
-        series: [
-            {
-                name: "series-1",
-                data: [30, 40, 45, 50, 49, 60, 70, 91]
-            }
-        ]
-    })
+        grid: {
+            show: true,
+            borderColor: "#E0E0E0",
+            strokeDashArray: 1,
+        },
+        xaxis: {
+            categories: chartLabels,
+            title: {
+                text: undefined,
+            },
+            labels: {
+                show: true,
+                style: { colors: "#A0C4FF" },
+            },
+        },
+        yaxis: {
+            labels: {
+                show: true,
+                style: { colors: "#A0C4FF" },
+            },
+        },
+        stroke: {
+            curve: "smooth",
+            width: 3,         
+            colors: ["#87CEEB"],
+        },
+        dataLabels: {
+            enabled: false, 
+        },
+        tooltip: {
+            enabled: true,
+            style: {
+                fontSize: '12px',
+            },
+        },
+    };
 
-    return (
-        <div>
-            {chartData && chartData?.series && (
-                <Chart
-                    options={chartData.options}
-                    series={chartData.series}
-                    type="line"
-                />
-            )}
-        </div>
-    )
-}
+    const series = [
+        {
+            name: "Price",
+            data: chartData,
+        },
+    ];
 
-export default ChartJSx
+    return <Chart options={options} series={series} type="line" height={400} />;
+};
+
+export default ChartComponent;

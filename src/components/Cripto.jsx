@@ -6,7 +6,7 @@ import { ThemeContext } from '../App';
 import { useNavigate } from 'react-router-dom';
 
 const Cripto = () => {
-    const { theme, setDetal } = useContext(ThemeContext)
+    const { theme, setDetal,bar,setBar } = useContext(ThemeContext)
     const [product, setProduct] = useState([]);
     const [load, setLoad] = useState({});
     const [currentPage, setCurrentPage] = useState(0);
@@ -29,6 +29,8 @@ const Cripto = () => {
             ...prevLoad,
             [id]: !prevLoad[id],
         }));
+        setBar([...bar, id])
+        localStorage.setItem('bar',JSON.stringify(bar))
     };
 
     const handlePageChange = ({ selected }) => {
